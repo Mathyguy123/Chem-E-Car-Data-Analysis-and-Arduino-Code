@@ -13,7 +13,7 @@ void loop() {
   value = analogRead(pRes);  
   Serial.println(value);
 
-  if (value>=270){
+  if (value>=300){
     digitalWrite(led, HIGH);
   }
   else{
