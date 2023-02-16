@@ -1,10 +1,10 @@
 int value; //Store value from photoresistor
 const int pRes = A0; //Photoresistor analog pin
-const int led = 13;
+const int motor = A1; //Motor analog pin (previously digital and used for LED)
 
 void setup() {
   pinMode(pRes, INPUT);
-  pinMode(led, OUTPUT);
+  pinMode(motor, OUTPUT);
   Serial.begin(9600); //Set up the console
 }
 
@@ -14,10 +14,10 @@ void loop() {
   Serial.println(value);
 
   if (value>=300){
-    digitalWrite(led, HIGH);
+    analogWrite(motor, 200);
   }
   else{
-    digitalWrite(led, LOW);
+    analogWrite(motor, 0);
   }
 
 }
