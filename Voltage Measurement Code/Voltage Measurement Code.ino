@@ -1,3 +1,8 @@
+/*
+* Author: Abrar Sheikh, 2/16/2023
+* Purpose: measures voltage of input source vs time
+*/
+
 unsigned long myTime;
 
 int value; //Store value from voltage divider
