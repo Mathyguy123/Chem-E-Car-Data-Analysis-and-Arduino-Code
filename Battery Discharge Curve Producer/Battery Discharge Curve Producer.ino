@@ -82,12 +82,15 @@ void loop() {
     setI = maxI;
   }
 
+  //Force current draw of battery based on user input
   analogWrite(vset, int(setI*curRs/1000.0*51));
 
+  //Measure and display actual current being drawn
   float realCurr = analogRead(iread)/209.0*1000/curRs;
   sum = sum+realCurr-readings[count];
   readings[count] = realCurr;
 
+  //Time-averaged current
   int avgCurr = round(sum/256.0);
   //Serial.println(avgCurr);
 
