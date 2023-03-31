@@ -1,6 +1,6 @@
 /*
 * Created: Jan 25 2023   Modified: Mar 29, 2023
-* Author: Abrar Sheikh
+* Author: Abrar Sheikh, editted by Neil Kadian to use analog output rather than digital output
 * This code is responsible for controlling the motors in the Chem-E-Car based on the iodine clock stopping mechanism.
 */
 
